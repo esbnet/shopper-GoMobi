@@ -29,6 +29,11 @@ services:
       - POSTGRES_PASSWORD=gomobi_senha
       - POSTGRES_DB=gomobi
       - DATABASE_URL=postgresql://gomobi_usuario:gomobi_senha@db:5432/gomobi
+      - NODE_ENV=dev # dev | prod | test
+      - PORT=8080
+      - JWT_SECRET=fjklasdlsdfkçlasdkfasjdçfljasdlfjsdlfjsldafjsldfj
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+
     networks:
       - gomobi_network
 
