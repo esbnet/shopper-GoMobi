@@ -1,0 +1,60 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    env_file: .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - DATABASE_URL=postgresql://gomobi_usuario:gomobi_senha@db:5432/gomobi
+    networks:
+      - gomobi_network
+
+
+  api:
+    build:
+      context: ./api
+    container_name: api
+    restart: no
+    env_file: .env
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    environment:
+      - POSTGRES_USER=gomobi_usuario
+      - POSTGRES_PASSWORD=gomobi_senha
+      - POSTGRES_DB=gomobi
+      - DATABASE_URL=postgresql://gomobi_usuario:gomobi_senha@db:5432/gomobi
+    networks:
+      - gomobi_network
+
+  spa:
+    build:
+      context: ./spa
+      args:
+        - VITE_GOOGLE_API_KEY=${GOOGLE_API_KEY}
+        - VITE_API_URL=${API_URL:-http://localhost:8080}
+        - VITE_APP_ENV=${APP_ENV:-prod}
+    container_name: spa
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - gomobi_network
+    environment:
+      - VITE_GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - VITE_API_URL=${API_URL:-http://localhost:8080}
+      - VITE_APP_ENV=${APP_ENV:-prod}
+
+volumes:
+  db_data:
+  
+networks:
+  gomobi_network:
+    driver: bridge

@@ -1,0 +1,16 @@
+{
+  "linter": {
+    "rules": {
+      "correctness": {},
+      "suspicious": {
+        "noDebugger": "off",
+        "noConsoleLog": "info",
+        "noShadowRestrictedNames": "off"
+      },
+      "style": {
+        "noShoutyConstants": "warn",
+        "useNamingConvention": "error"
+      }
+    }
+  }
+}
