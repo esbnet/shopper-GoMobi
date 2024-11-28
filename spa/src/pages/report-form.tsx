@@ -183,12 +183,10 @@ export default function ReportForm() {
 								<TableCell className="px-4 py-2">{rider.origin}</TableCell>
 								<TableCell className="px-4 py-2">{rider.destination}</TableCell>
 								<TableCell className="px-4 py-2">
-									{(rider.distance / 1000).toFixed(2)} km
+									{rider.distance / 1000} km
 								</TableCell>
 								<TableCell className="px-4 py-2">{rider.duration}</TableCell>
-								<TableCell className="px-4 py-2">
-									{rider.value.toFixed(2)}
-								</TableCell>
+								<TableCell className="px-4 py-2">{rider.value}</TableCell>
 							</TableRow>
 						))}
 					</TableBody>

@@ -48,7 +48,9 @@ export function DataTable() {
 			console.log(error);
 		} finally {
 			setIsLoading(false);
-			navigate(`/report/${confirmData.customer_id}?driver_id=${driver_id}`);
+			navigate(`/report/${confirmData.customer_id}?driver_id=${driver_id}`, {
+				replace: true,
+			});
 		}
 	}
 

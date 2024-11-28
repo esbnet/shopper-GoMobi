@@ -13,7 +13,6 @@ import { Toaster } from "./components/ui/sonner";
 import Home from "./pages/home";
 import { NotFound } from "./pages/not-found";
 import ReportForm from "./pages/report-form";
-import RootLayout from "./root-layout";
 
 export default function App() {
 	return (
@@ -21,10 +20,8 @@ export default function App() {
 			<Toaster position="top-right" richColors expand={true} />
 			<BrowserRouter>
 				<Routes>
-					<Route element={<RootLayout />}>
-						<Route path="/" element={<Home />} />
-					</Route>
 					<Route element={<AppLayout />}>
+						<Route path="/" element={<Home />} />
 						<Route path="/ride" element={<CallRide />} />
 						<Route path="/call-ride" element={<FormCallRide />} />
 						<Route path="/confirm" element={<ConfirmRide />} />
