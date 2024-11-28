@@ -32,12 +32,23 @@ A API consiste basicamente em três endpoints:
 O Frontend é uma Single Page Application em React e TypeScript e terá as seguintes telas:
 
 - Solicitação de viagens - formulário onde o cliente informa seu código, a origem e o destino da viagem. 
-- Opções de viagens - tela onde tem um mapa (google maps) que exibe o trajeto desejado com a distância, o tempo e uma relação de motoristas para escolher para a viagem.
-- Histórico de viagens - relação de viagens realizadas pelo cliente e, opcionalmente, pelo motorista também.
 
 </br>
 
+- Opções de viagens - tela onde tem um mapa (google maps) que exibe o trajeto desejado com a distância, o tempo e uma relação de motoristas para escolher para a viagem.
 ![Confirmar](https://github.com/esbnet/shopper-GoMobi/blob/main/doc/2024-11-27_21-29_1.jpeg?raw=true)
+
+</br>
+
+- Histórico de viagens - relação de viagens realizadas pelo cliente e, opcionalmente, pelo motorista também.
+![Confirmar](https://github.com/esbnet/shopper-GoMobi/blob/main/doc/report.jpeg?raw=true)
+
+</br>
+
+
+
+
+
 
 
 ### Principais Tech
