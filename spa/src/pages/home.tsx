@@ -5,7 +5,6 @@ import {
 	TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
 
@@ -19,9 +18,9 @@ export default function Home() {
 					<h1 className="mb-14 font-thin text-2xl text-slate-600">
 						Ficamos felizes em ter voce aqui
 					</h1>
-					<div className="mb-12">
+					{/* <div className="mb-12">
 						<Logo />
-					</div>
+					</div> */}
 
 					<TooltipProvider>
 						<Tooltip>
