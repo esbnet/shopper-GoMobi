@@ -1,6 +1,7 @@
 # GoMobi
 ---
-Esta é uma aplicação conceito onde o usuário realiza solicitação de transporte em carros particulares registrados na plataforma, o conduzindo de um ponto A até um ponto B. Ele pode escolher entre algumas opções de motoristas e valores e confirmar a viagem. Poderá também listar acompanhar o histórico das viagens realizadas. 
+Esta é uma aplicação conceito onde o usuário realiza solicitação de transporte em carros particulares registrados na plataforma, o conduzindo de um ponto A até um ponto B. Após informar origem e destino da viagem, ele pode escolher entre algumas opções de motoristas e valores disponíveis no momento e confirmar a viagem. Poderá também listar acompanhar o histórico das viagens realizadas.
+ 
 
 ![Logo](https://github.com/esbnet/shopper-GoMobi/blob/main/doc/home.jpeg?raw=true)
 
